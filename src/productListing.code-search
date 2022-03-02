@@ -1,0 +1,25 @@
+# Query: productListing
+# ContextLines: 1
+
+6 results - 2 files
+
+src/App.js:
+   3  import Header from "./containers/header";
+   4: import ProductListing from "./containers/ProductListing";
+   5  import productDetail from "./containers/productDetail";
+
+  12          <Routes>
+  13:           <Route path="/" exact component={ProductListing} />
+  14            <Route path="/product/:productId" exact component={productDetail} />
+
+src/containers/ProductListing.js:
+   3  
+   4: const ProductListing = () => {
+   5    const products = useSelector((state) => state);
+
+   8      <div className="ui grid container">
+   9:       <h1>ProductListing</h1>
+  10      </div>
+
+  13  
+  14: export default ProductListing;
